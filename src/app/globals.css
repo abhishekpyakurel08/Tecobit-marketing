@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-anybody), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-anybody: var(--font-anybody);
 
-@theme inline {
+  --color-tecobit-blue: #5C899E;
+  --color-tecobit-mint: #3DFFC5;
+  --color-tecobit-green: #39846D;
+  --color-tecobit-soft-mint: #C3F8E8;
+  --color-tecobit-deep-teal: #1F6F78;
+  --color-academy-amber: #FFC857;
+  --color-marketing-coral: #FF6B4A;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+
+  --animate-ripple: ripple 0.6s linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
   }
+}
+
+:root {
+  --background: rgba(255, 255, 255, 0.92);
+  --foreground: #0a192f;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --border: #e2e8f0;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #3DFFC5;
+  --premium-gradient: linear-gradient(135deg, #3DFFC5 0%, #1F6F78 100%);
+}
+
+.dark {
+  --background: rgba(6, 14, 29, 0.85);
+  --foreground: #f1f5f9;
+  --nav-bg: rgba(6, 14, 29, 0.82);
+  --border: #1e293b;
+  --muted: #0f172a;
+  --muted-foreground: #94a3b8;
+  --accent: #3DFFC5;
+  --premium-gradient: linear-gradient(135deg, #3DFFC5 0%, #060e1d 100%);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-anybody), sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Grain Overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("https://www.transparenttextures.com/patterns/gray-sand.png");
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
 }
