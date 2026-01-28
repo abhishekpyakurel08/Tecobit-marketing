@@ -19,11 +19,11 @@ export function PortfolioLogos() {
     return (
         <section className="py-24 bg-muted/10 transition-colors duration-300">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 uppercase tracking-tight">
-                        Our <span className="text-tecobit-mint">Portfolio</span>
+                <div className="text-center mb-20">
+                    <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-8 uppercase tracking-tighter leading-[0.85]">
+                        Market <span className="text-tecobit-mint">Influence</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-tecobit-mint mx-auto rounded-full"></div>
+                    <div className="w-32 h-2 bg-tecobit-mint mx-auto rounded-full"></div>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

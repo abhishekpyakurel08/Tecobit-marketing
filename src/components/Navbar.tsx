@@ -59,19 +59,19 @@ export function Navbar({ data }: NavbarProps) {
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo & Brand */}
-                <Link href="/" className="flex items-center space-x-4 group">
-                    <div className="relative h-14 w-14 rounded-xl overflow-hidden shadow-2xl transition-all group-hover:scale-110 group-hover:shadow-tecobit-mint/20 border border-white/10">
+                <Link href="/" className="flex items-center space-x-3 group">
+                    <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-xl overflow-hidden shadow-lg transition-all group-hover:scale-105 group-hover:shadow-tecobit-mint/20 border border-white/10 bg-white/50 flex items-center justify-center">
                         <Image
                             src={logoUrl}
                             alt="Tecobit Logo"
                             fill
-                            className="object-contain transition-all"
+                            className="object-contain p-1"
                             priority
                         />
                     </div>
-                    <div className="hidden sm:flex flex-col">
-                        <span className="text-xl font-black tracking-tighter text-foreground leading-none">TECOBIT</span>
-                        <span className="text-[10px] font-bold tracking-[0.3em] text-tecobit-mint uppercase">Marketing</span>
+                    <div className="flex flex-col">
+                        <span className="text-3xl md:text-4xl font-black tracking-tighter text-foreground leading-[0.75] mb-1.5 transition-all group-hover:text-tecobit-mint">TECOBIT</span>
+                        <span className="text-[11px] md:text-[13px] font-black tracking-[0.5em] text-tecobit-mint/80 uppercase">Marketing</span>
                     </div>
                 </Link>
 
@@ -83,10 +83,10 @@ export function Navbar({ data }: NavbarProps) {
                             <Link
                                 key={index}
                                 href={item.link || "#"}
-                                className="text-foreground/80 hover:text-tecobit-mint font-bold text-sm uppercase tracking-widest transition-colors flex items-center space-x-2"
+                                className="text-foreground/80 hover:text-tecobit-mint font-black text-sm md:text-base uppercase tracking-[0.2em] transition-all hover:tracking-[0.3em] relative group/link"
                             >
-                                {/* <span><Icon size={16} /></span> */}
                                 <span>{item.label}</span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tecobit-mint transition-all group-hover/link:w-full"></span>
                             </Link>
                         );
                     })}
@@ -96,11 +96,13 @@ export function Navbar({ data }: NavbarProps) {
 
                         <RippleButton
                             variant="primary"
-                            className="px-6 py-3 rounded-full"
+                            className="px-8 py-3.5 rounded-full shadow-lg shadow-tecobit-mint/10"
                             onClick={() => window.location.href = `tel:${data?.phoneNumber || '+9779863992047'}`}
                         >
-                            <Phone size={16} fill="black" />
-                            <span className="text-xs font-black">{data?.phoneNumber || '+977-9863992047'}</span>
+                            <div className="flex items-center space-x-3">
+                                <Phone size={18} fill="black" />
+                                <span className="text-base font-black tracking-widest">{data?.phoneNumber || '+977-9863992047'}</span>
+                            </div>
                         </RippleButton>
                     </div>
                 </nav>
@@ -134,21 +136,22 @@ export function Navbar({ data }: NavbarProps) {
                                         key={index}
                                         href={item.link || "#"}
                                         onClick={() => setIsOpen(false)}
-                                        className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/5 transition-all text-lg font-bold"
+                                        className="flex items-center space-x-6 p-5 rounded-2xl hover:bg-tecobit-mint/10 transition-all text-2xl font-black uppercase tracking-tighter group"
                                     >
-                                        <span className="text-tecobit-mint"><Icon size={24} /></span>
-                                        <span>{item.label}</span>
+                                        <span className="text-tecobit-mint group-hover:scale-125 transition-transform"><Icon size={28} /></span>
+                                        <span className="group-hover:translate-x-2 transition-transform">{item.label}</span>
                                     </Link>
                                 );
                             })}
                             <div className="pt-6 border-t border-border">
                                 <RippleButton
                                     variant="primary"
-                                    className="w-full flex items-center justify-center space-x-3"
+                                    size="lg"
+                                    className="w-full flex items-center justify-center space-x-4 py-6 rounded-2xl shadow-xl shadow-tecobit-mint/20"
                                     onClick={() => window.location.href = "tel:+9779863992047"}
                                 >
-                                    <Phone size={20} fill="black" />
-                                    <span>CALL US NOW</span>
+                                    <Phone size={24} fill="black" />
+                                    <span className="font-black tracking-widest">CALL US NOW</span>
                                 </RippleButton>
                             </div>
                         </div>

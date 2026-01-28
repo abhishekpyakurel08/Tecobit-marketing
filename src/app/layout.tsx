@@ -81,10 +81,12 @@ import config from '@/payload.config'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { HeaderData, FooterData } from '@/types/globals';
+
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const payload = await getPayload({ config })
-  const headerData = await payload.findGlobal({ slug: 'header' })
-  const footerData = await payload.findGlobal({ slug: 'footer' })
+  const headerData = (await payload.findGlobal({ slug: 'header' })) as unknown as HeaderData
+  const footerData = (await payload.findGlobal({ slug: 'footer' })) as unknown as FooterData
 
   return (
     <html lang="en" suppressHydrationWarning>

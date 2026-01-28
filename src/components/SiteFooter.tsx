@@ -34,11 +34,11 @@ export function SiteFooter({ data }: SiteFooterProps) {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-black tracking-tighter text-foreground leading-none">TECOBIT</span>
+                                <span className="text-h2 font-black tracking-tighter text-foreground leading-none">TECOBIT</span>
                                 <span className="text-xs font-bold tracking-[0.4em] text-tecobit-mint uppercase mt-1">Marketing</span>
                             </div>
                         </Link>
-                        <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                        <p className="text-muted-foreground text-body-sm leading-relaxed max-w-xs">
                             {data?.description || "Empowering Nepalese businesses with cutting-edge digital marketing strategies. We turn your vision into value through data-driven results since 2013."}
                         </p>
                         <div className="flex space-x-4">
@@ -67,8 +67,8 @@ export function SiteFooter({ data }: SiteFooterProps) {
                     {/* Dynamic Sections */}
                     {data?.sections?.map((section, idx) => (
                         <div key={idx}>
-                            <h3 className="font-black text-xl mb-8 uppercase tracking-widest text-tecobit-mint">{section.title}</h3>
-                            <ul className="space-y-4 text-sm text-muted-foreground">
+                            <h3 className="font-black text-body-base mb-8 uppercase tracking-widest text-tecobit-mint">{section.title}</h3>
+                            <ul className="space-y-4 text-body-sm text-muted-foreground">
                                 {section.links.map((link, linkIdx) => (
                                     <li key={linkIdx}>
                                         <Link href={link.url} className="hover:text-tecobit-mint transition-colors">{link.label}</Link>
@@ -80,8 +80,8 @@ export function SiteFooter({ data }: SiteFooterProps) {
                             <>
                                 {/* Static Fallback Services */}
                                 <div>
-                                    <h3 className="font-black text-xl mb-8 uppercase tracking-widest text-tecobit-mint">Services</h3>
-                                    <ul className="space-y-4 text-sm text-muted-foreground">
+                                    <h3 className="font-black text-body-base mb-8 uppercase tracking-widest text-tecobit-mint">Services</h3>
+                                    <ul className="space-y-4 text-body-sm text-muted-foreground">
                                         <li><Link href="/services/seo" className="hover:text-tecobit-mint transition-colors">SEO Optimization</Link></li>
                                         <li><Link href="/services/social-media-marketing" className="hover:text-tecobit-mint transition-colors">Social Media Marketing</Link></li>
                                         <li><Link href="/services/web-design" className="hover:text-tecobit-mint transition-colors">Web Development</Link></li>
@@ -90,8 +90,8 @@ export function SiteFooter({ data }: SiteFooterProps) {
 
                                 {/* Static Fallback Company */}
                                 <div>
-                                    <h3 className="font-black text-xl mb-8 uppercase tracking-widest text-tecobit-mint">Company</h3>
-                                    <ul className="space-y-4 text-sm text-muted-foreground">
+                                    <h3 className="font-black text-body-base mb-8 uppercase tracking-widest text-tecobit-mint">Company</h3>
+                                    <ul className="space-y-4 text-body-sm text-muted-foreground">
                                         <li><Link href="/about" className="hover:text-tecobit-mint transition-colors">About Us</Link></li>
                                         <li><Link href="/contact" className="hover:text-tecobit-mint transition-colors">Contact Us</Link></li>
                                     </ul>
@@ -101,8 +101,8 @@ export function SiteFooter({ data }: SiteFooterProps) {
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <h3 className="font-black text-xl mb-8 uppercase tracking-widest text-tecobit-mint">Contact</h3>
-                        <div className="space-y-4 text-sm text-muted-foreground">
+                        <h3 className="font-black text-body-base mb-8 uppercase tracking-widest text-tecobit-mint">Contact</h3>
+                        <div className="space-y-4 text-body-sm text-muted-foreground">
                             <div className="flex items-center space-x-3">
                                 <Mail size={18} className="text-tecobit-mint" />
                                 <a href={`mailto:${data?.contactInfo?.email || 'info@tecobit.com'}`}>{data?.contactInfo?.email || 'info@tecobit.com'}</a>
@@ -120,7 +120,7 @@ export function SiteFooter({ data }: SiteFooterProps) {
 
                 </div>
 
-                <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+                <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center text-caption text-muted-foreground">
                     <p>{data?.copyrightText || `© ${new Date().getFullYear()} Tecobit Marketing. All rights reserved.`}</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="#" className="hover:text-tecobit-mint transition-colors">Cookie Policy</Link>

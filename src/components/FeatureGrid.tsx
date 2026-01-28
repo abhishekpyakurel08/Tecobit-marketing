@@ -32,12 +32,12 @@ const features = [
 
 export function FeatureGrid() {
     return (
-        <section className="py-24 bg-transparent overflow-hidden transition-colors duration-300">
-            <div className="container mx-auto px-4 space-y-32">
+        <section className="py-16 md:py-24 bg-transparent overflow-hidden transition-colors duration-300">
+            <div className="container mx-auto px-4 space-y-20 md:space-y-32">
                 {features.map((feature, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col lg:flex-row items-center gap-16 ${feature.reverse ? 'lg:flex-row-reverse' : ''}`}
+                        className={`flex flex-col lg:flex-row items-center gap-10 md:gap-16 ${feature.reverse ? 'lg:flex-row-reverse' : ''}`}
                     >
                         {/* Text Content */}
                         <motion.div
@@ -47,16 +47,16 @@ export function FeatureGrid() {
                             transition={{ duration: 0.8 }}
                             className="lg:w-1/2 space-y-6"
                         >
-                            <h2 className="text-4xl md:text-5xl font-black text-foreground leading-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-foreground leading-[0.85] tracking-tighter uppercase">
                                 {feature.title}
                             </h2>
-                            <div className="w-16 h-1.5 bg-tecobit-mint rounded-full"></div>
-                            <p className="text-xl text-gray-600 leading-relaxed">
+                            <div className="w-24 h-2 bg-tecobit-mint rounded-full"></div>
+                            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
                                 {feature.description}
                             </p>
-                            <button className="text-tecobit-deep-teal font-bold flex items-center group">
-                                LEARN MORE
-                                <span className="ml-2 transform group-hover:translate-x-2 transition-transform">→</span>
+                            <button className="text-tecobit-mint font-black text-lg flex items-center group tracking-[0.2em]">
+                                DISCOVER MORE
+                                <span className="ml-3 transform group-hover:translate-x-4 transition-transform text-2xl">→</span>
                             </button>
                         </motion.div>
 

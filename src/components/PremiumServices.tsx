@@ -47,7 +47,7 @@ const services = [
 
 export function PremiumServices() {
     return (
-        <section className="py-32 bg-transparent relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-tecobit-mint/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-tecobit-deep-teal/5 blur-[100px] rounded-full pointer-events-none" />
@@ -69,10 +69,10 @@ export function PremiumServices() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none"
+                        className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85]"
                     >
-                        Premium <span className="text-tecobit-mint">Solutions</span> <br />
-                        Built For <span className="text-tecobit-soft-mint transition-colors hover:text-tecobit-mint">Scale</span>
+                        Elite <span className="text-tecobit-mint">Solutions</span> <br />
+                        Built For <span className="text-tecobit-soft-mint transition-colors hover:text-tecobit-mint">Market Dominance</span>
                     </motion.h2>
                 </div>
 

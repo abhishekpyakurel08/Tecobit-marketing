@@ -35,37 +35,37 @@ export default function TeamPage() {
 
     return (
         <PageTransition>
-            <div className="bg-background min-h-screen pt-20">
+            <div className="bg-transparent min-h-screen pt-20">
                 <div className="container mx-auto px-6 text-center mb-16">
-                    <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                        Meet the <span className="text-tecobit-mint">Team</span>
+                    <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]">
+                        The <span className="text-tecobit-mint italic">Architects</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        The creative minds and technical wizards behind your digital success.
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+                        The elite creative minds and high-performance technical wizards engineering your digital dominance.
                     </p>
                 </div>
 
                 <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
                     {team.map((member, idx) => (
                         <div key={idx} className="group relative">
-                            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div className="relative h-[500px] w-full rounded-3xl overflow-hidden mb-8 border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700 shadow-xl group-hover:shadow-tecobit-mint/20">
                                 <Image
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                                    <div className="flex space-x-4 text-white">
-                                        <Linkedin size={20} className="hover:text-tecobit-mint cursor-pointer" />
-                                        <Twitter size={20} className="hover:text-tecobit-mint cursor-pointer" />
-                                        <Mail size={20} className="hover:text-tecobit-mint cursor-pointer" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-tecobit-deep-teal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                                    <div className="flex space-x-6 text-white">
+                                        <Linkedin size={24} className="hover:text-tecobit-mint cursor-pointer transition-transform hover:scale-125" />
+                                        <Twitter size={24} className="hover:text-tecobit-mint cursor-pointer transition-transform hover:scale-125" />
+                                        <Mail size={24} className="hover:text-tecobit-mint cursor-pointer transition-transform hover:scale-125" />
                                     </div>
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold uppercase">{member.name}</h3>
-                            <p className="text-tecobit-mint font-bold text-sm tracking-widest uppercase mb-2">{member.role}</p>
-                            <p className="text-muted-foreground text-sm">{member.bio}</p>
+                            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-2 group-hover:text-tecobit-mint transition-colors italic">{member.name}</h3>
+                            <p className="text-tecobit-mint font-black text-xs md:text-sm tracking-[0.3em] uppercase mb-4">{member.role}</p>
+                            <p className="text-muted-foreground text-lg leading-relaxed font-medium">{member.bio}</p>
                         </div>
                     ))}
                 </div>

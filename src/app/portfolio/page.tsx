@@ -10,11 +10,11 @@ export default function PortfolioPage() {
         <PageTransition>
             <div className="bg-background min-h-screen pt-20">
                 <div className="container mx-auto px-6 text-center mb-20">
-                    <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                        Our <span className="text-tecobit-mint">Work</span>
+                    <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]">
+                        Our <span className="text-tecobit-mint italic">Work</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        See how we&apos;ve helped businesses like yours scale to new heights.
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+                        Discover how we&apos;ve engineered market dominance for brands through precision-scaled digital infrastructure.
                     </p>
                 </div>
 
@@ -28,9 +28,9 @@ export default function PortfolioPage() {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:brightness-50"
                                 />
-                                <div className="absolute inset-0 flex flex-col justify-end p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h3 className="text-3xl font-black text-white uppercase tracking-tight mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Project Name {item}</h3>
-                                    <p className="text-tecobit-mint font-bold uppercase tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Digital Marketing Strategy</p>
+                                <div className="absolute inset-0 flex flex-col justify-end p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+                                    <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700">Project <span className="text-tecobit-mint">{item}</span></h3>
+                                    <p className="text-tecobit-mint font-black uppercase tracking-[0.3em] text-sm md:text-base translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100 italic">Advanced Scaling Architecture</p>
                                 </div>
                             </div>
                         ))}

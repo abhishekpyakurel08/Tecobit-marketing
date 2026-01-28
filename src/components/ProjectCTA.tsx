@@ -17,8 +17,8 @@ export function ProjectCTA() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 uppercase">
-                        Tell Us About <span className="text-tecobit-mint">your project</span>
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-4 uppercase leading-none">
+                        Scale Your <span className="text-tecobit-mint">Digital impact</span>
                     </h2>
                     <div className="w-24 h-1 bg-tecobit-mint mx-auto rounded-full"></div>
                 </motion.div>
@@ -27,10 +27,10 @@ export function ProjectCTA() {
 
                     {/* Left Info */}
                     <div className="lg:col-span-5 space-y-12">
-                        <div className="space-y-4">
-                            <h3 className="text-3xl font-bold italic">Let&apos;s build something great together.</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                We are here to help you navigate the digital landscape. From strategy to execution, our team is dedicated to your success.
+                        <div className="space-y-6">
+                            <h3 className="text-3xl md:text-4xl font-black italic text-tecobit-mint leading-tight">Ready to lead the market?</h3>
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium">
+                                We specialize in high-growth digital infrastructure. From premium branding to performance SEO, we build the engines that drive your business forward.
                             </p>
                         </div>
 
@@ -40,7 +40,7 @@ export function ProjectCTA() {
                                     <Mail size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-muted-foreground uppercase tracking-widest">Email Us</p>
+                                    <p className="text-base text-muted-foreground uppercase tracking-widest font-bold">Email Us</p>
                                     <p className="text-xl font-bold">info@tecobit.com</p>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ export function ProjectCTA() {
                                     <Phone size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-muted-foreground uppercase tracking-widest">Call Us</p>
+                                    <p className="text-base text-muted-foreground uppercase tracking-widest font-bold">Call Us</p>
                                     <p className="text-xl font-bold">+977 9863992047</p>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@ export function ProjectCTA() {
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-muted-foreground uppercase tracking-widest">Visit Us</p>
+                                    <p className="text-base text-muted-foreground uppercase tracking-widest font-bold">Visit Us</p>
                                     <p className="text-xl font-bold">Kathmandu, Nepal</p>
                                 </div>
                             </div>
@@ -113,9 +113,10 @@ export function ProjectCTA() {
 
                             <RippleButton
                                 type="button"
-                                className="md:col-span-2 w-full bg-tecobit-mint text-black font-black py-5 rounded-xl shadow-[0_0_25px_rgba(61,255,197,0.2)] uppercase tracking-[0.3em] transition-all hover:brightness-110"
+                                size="lg"
+                                className="md:col-span-2 w-full bg-tecobit-mint text-black font-black py-6 rounded-2xl shadow-[0_0_40px_rgba(61,255,197,0.3)] uppercase tracking-[0.4em] transition-all hover:scale-[1.02] border-none"
                             >
-                                Submit Request
+                                Launch Your Project
                             </RippleButton>
                         </form>
                     </div>

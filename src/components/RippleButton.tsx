@@ -3,13 +3,22 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import { cn } from "@/lib/utils";
+
 interface RippleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     className?: string;
     variant?: "primary" | "secondary" | "outline" | "ghost";
+    size?: "sm" | "md" | "lg";
 }
 
-export function RippleButton({ children, className = "", variant = "primary", ...props }: RippleButtonProps) {
+export function RippleButton({
+    children,
+    className = "",
+    variant = "primary",
+    size = "md",
+    ...props
+}: RippleButtonProps) {
     const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
 
     useEffect(() => {
@@ -35,9 +44,20 @@ export function RippleButton({ children, className = "", variant = "primary", ..
         ghost: "bg-transparent text-foreground hover:bg-white/10"
     };
 
+    const sizes = {
+        sm: "px-4 py-2 text-xs",
+        md: "px-8 py-4 text-base",
+        lg: "px-10 py-5 text-lg"
+    };
+
     return (
         <button
-            className={`relative overflow-hidden px-8 py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all active:scale-95 ${variants[variant]} ${className}`}
+            className={cn(
+                "relative overflow-hidden rounded-xl font-black uppercase tracking-widest transition-all active:scale-95",
+                variants[variant],
+                sizes[size],
+                className
+            )}
             onMouseDown={addRipple}
             {...props}
         >

@@ -44,11 +44,11 @@ export default function AIStudioPage() {
                             <Zap size={24} className="fill-current" />
                             <span className="font-black tracking-[0.4em] text-xs uppercase">Premium Lab</span>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6">
-                            AI <span className="text-tecobit-mint">Studio</span>
+                        <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+                            AI <span className="text-tecobit-mint italic">Studio</span>
                         </h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl">
-                            The advanced content generation engine for high-performance digital marketing. Build, iterate, and deploy at scale.
+                        <p className="text-muted-foreground text-xl md:text-2xl max-w-3xl font-medium leading-relaxed">
+                            The advanced neural engine for high-performance digital marketing. Build, iterate, and deploy at scale with Tecobit intelligence.
                         </p>
                     </header>
 
@@ -99,16 +99,17 @@ export default function AIStudioPage() {
                                         </div>
                                         <RippleButton
                                             variant="primary"
-                                            className="px-10 flex items-center space-x-3 min-w-[200px]"
+                                            size="lg"
+                                            className="px-12 py-5 flex items-center space-x-4 min-w-[240px] shadow-2xl shadow-tecobit-mint/20"
                                             onClick={handleGenerate}
                                             disabled={isGenerating}
                                         >
                                             {isGenerating ? (
-                                                <RefreshCcw size={18} className="animate-spin" />
+                                                <RefreshCcw size={22} className="animate-spin" />
                                             ) : (
-                                                <Sparkles size={18} />
+                                                <Sparkles size={22} />
                                             )}
-                                            <span>{isGenerating ? "GENERATING..." : "GENERATE ✨"}</span>
+                                            <span className="text-lg font-black tracking-widest">{isGenerating ? "GENERATING..." : "GENERATE ✨"}</span>
                                         </RippleButton>
                                     </div>
                                 </div>

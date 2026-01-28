@@ -29,11 +29,11 @@ export function FaqSection() {
     return (
         <section className="py-24 bg-background transition-colors duration-300">
             <div className="container mx-auto px-4 max-w-4xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 uppercase tracking-tight">
-                        Common <span className="text-tecobit-deep-teal dark:text-tecobit-mint">Questions</span>
+                <div className="text-center mb-24">
+                    <h2 className="text-5xl md:text-7xl font-black text-foreground mb-8 uppercase tracking-tighter leading-[0.85]">
+                        Critical <span className="text-tecobit-mint">Intels</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-tecobit-mint mx-auto rounded-full"></div>
+                    <div className="w-32 h-2 bg-tecobit-mint mx-auto rounded-full"></div>
                 </div>
 
                 <div className="space-y-4">
@@ -41,12 +41,12 @@ export function FaqSection() {
                         <div key={index} className="border border-border rounded-2xl overflow-hidden shadow-sm bg-background dark:bg-white/5">
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full p-6 text-left flex items-center justify-between hover:bg-muted/5 transition-colors"
+                                className="w-full p-8 text-left flex items-center justify-between hover:bg-muted/5 transition-all group"
                             >
-                                <span className="text-xl font-bold text-foreground">{faq.question}</span>
+                                <span className="text-2xl font-black uppercase tracking-tighter text-foreground group-hover:text-tecobit-mint transition-colors">{faq.question}</span>
                                 <ChevronDown
-                                    className={`text-tecobit-mint transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
-                                    size={24}
+                                    className={`text-tecobit-mint transition-transform duration-500 ${openIndex === index ? 'rotate-180 scale-125' : 'group-hover:translate-y-1'}`}
+                                    size={32}
                                 />
                             </button>
 
@@ -56,9 +56,9 @@ export function FaqSection() {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: "auto", opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
+                                        transition={{ duration: 0.4, ease: "circOut" }}
                                     >
-                                        <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-50">
+                                        <div className="p-8 pt-0 text-xl text-muted-foreground leading-relaxed font-medium">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

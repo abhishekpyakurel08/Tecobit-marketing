@@ -9,11 +9,11 @@ export default function ServicesPage() {
         <PageTransition>
             <div className="bg-background min-h-screen pt-20">
                 <div className="container mx-auto px-6 text-center mb-12">
-                    <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                        Our <span className="text-tecobit-mint">Services</span>
+                    <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]">
+                        Our <span className="text-tecobit-mint italic">Services</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Comprehensive digital solutions tailored to explode your growth.
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+                        Architecting comprehensive digital infrastructure tailored for explosive, scalable growth.
                     </p>
                 </div>
 

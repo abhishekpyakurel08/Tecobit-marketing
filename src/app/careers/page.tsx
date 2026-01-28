@@ -8,13 +8,13 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 export default function CareersPage() {
     return (
         <PageTransition>
-            <div className="bg-background min-h-screen pt-20">
+            <div className="bg-transparent min-h-screen pt-20">
                 <div className="container mx-auto px-6 text-center mb-16">
-                    <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                        Join the <span className="text-tecobit-mint">Movement</span>
+                    <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]">
+                        Join the <span className="text-tecobit-mint italic">Architects</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        We are always looking for passionate people to join our growing team.
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+                        We are searching for elite talent to join our high-growth movement. Build the digital future with us.
                     </p>
                 </div>
 
@@ -25,16 +25,16 @@ export default function CareersPage() {
                             { title: "Digital Marketing Strategist", type: "Full-time", location: "Kathmandu", dept: "Marketing" },
                             { title: "UI/UX Designer", type: "Part-time", location: "Remote", dept: "Design" },
                         ].map((job, idx) => (
-                            <div key={idx} className="bg-muted/10 border border-border p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between group hover:border-tecobit-mint transition-colors cursor-pointer">
-                                <div className="mb-4 md:mb-0 text-center md:text-left">
-                                    <h3 className="text-2xl font-bold uppercase mb-2 group-hover:text-tecobit-mint transition-colors">{job.title}</h3>
-                                    <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground">
-                                        <span className="flex items-center"><CheckCircle2 size={16} className="mr-2 text-tecobit-mint" /> {job.dept}</span>
-                                        <span className="flex items-center"><CheckCircle2 size={16} className="mr-2 text-tecobit-mint" /> {job.type}</span>
-                                        <span className="flex items-center"><CheckCircle2 size={16} className="mr-2 text-tecobit-mint" /> {job.location}</span>
+                            <div key={idx} className="bg-muted/10 border border-border p-10 rounded-[2rem] flex flex-col md:flex-row items-center justify-between group hover:border-tecobit-mint transition-all hover:scale-[1.01] cursor-pointer">
+                                <div className="mb-6 md:mb-0 text-center md:text-left">
+                                    <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4 group-hover:text-tecobit-mint transition-colors italic">{job.title}</h3>
+                                    <div className="flex flex-wrap gap-6 justify-center md:justify-start text-base md:text-lg text-muted-foreground font-bold">
+                                        <span className="flex items-center"><CheckCircle2 size={20} className="mr-3 text-tecobit-mint" /> {job.dept}</span>
+                                        <span className="flex items-center"><CheckCircle2 size={20} className="mr-3 text-tecobit-mint" /> {job.type}</span>
+                                        <span className="flex items-center"><CheckCircle2 size={20} className="mr-3 text-tecobit-mint" /> {job.location}</span>
                                     </div>
                                 </div>
-                                <RippleButton variant="outline" className="min-w-[150px]">
+                                <RippleButton variant="primary" size="lg" className="min-w-[200px] shadow-lg shadow-tecobit-mint/10">
                                     Apply Now
                                 </RippleButton>
                             </div>
@@ -42,21 +42,21 @@ export default function CareersPage() {
                     </div>
                 </div>
 
-                <section className="bg-tecobit-mint text-black py-20 px-6 mb-12">
+                <section className="bg-tecobit-mint text-black py-28 px-6 mb-12 shadow-[0_0_50px_rgba(61,255,197,0.2)]">
                     <div className="container mx-auto text-center">
-                        <h2 className="text-3xl font-black uppercase mb-6">Why Work With Us?</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                            <div className="p-6 bg-black/5 rounded-xl">
-                                <h4 className="font-bold uppercase mb-2">Growth</h4>
-                                <p className="text-sm">Continuous learning and paid certifications.</p>
+                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-16 leading-[0.85]">Built on <span className="italic">Values</span></h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+                            <div className="p-10 bg-black/5 rounded-3xl">
+                                <h4 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4">Elite Growth</h4>
+                                <p className="text-lg md:text-xl font-medium leading-relaxed">Continuous high-performance learning and paid sector certifications.</p>
                             </div>
-                            <div className="p-6 bg-black/5 rounded-xl">
-                                <h4 className="font-bold uppercase mb-2">Culture</h4>
-                                <p className="text-sm">Fun, collaborative, and inclusive environment.</p>
+                            <div className="p-10 bg-black/5 rounded-3xl">
+                                <h4 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4">Prime Culture</h4>
+                                <p className="text-lg md:text-xl font-medium leading-relaxed">Fun, collaborative, and hyper-inclusive high-tech environment.</p>
                             </div>
-                            <div className="p-6 bg-black/5 rounded-xl">
-                                <h4 className="font-bold uppercase mb-2">Flexibility</h4>
-                                <p className="text-sm">Hybrid work options and flexible hours.</p>
+                            <div className="p-10 bg-black/5 rounded-3xl">
+                                <h4 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4">Fluid Flex</h4>
+                                <p className="text-lg md:text-xl font-medium leading-relaxed">Advanced hybrid work architectures and performance-based flexibility.</p>
                             </div>
                         </div>
                     </div>
