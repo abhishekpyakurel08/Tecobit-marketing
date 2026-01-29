@@ -23,7 +23,7 @@ export function ContactHero() {
                             <span className="text-tecobit-mint">Contact</span>
                         </nav>
 
-                        <h1 className="text-6xl md:text-8xl font-black text-foreground leading-[0.9]">
+                        <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-foreground leading-[0.9]">
                             LET&apos;S <span className="text-tecobit-mint">CONNECT</span> <br />
                             AND GROW
                         </h1>

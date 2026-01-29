@@ -5,23 +5,38 @@ import { cn } from '@/lib/utils';
 const typographyVariants = cva('', {
     variants: {
         variant: {
-            'display-3xl': 'text-display-3xl',
-            'display-2xl': 'text-display-2xl',
+            // Display
             'display-xl': 'text-display-xl',
             'display-lg': 'text-display-lg',
             'display-md': 'text-display-md',
-            'display-sm': 'text-display-sm',
+            // Legacy display mappings
+            'display-3xl': 'text-display-xl',
+            'display-2xl': 'text-display-lg',
+            'display-sm': 'text-display-md',
+
+            // Headings
             h1: 'text-h1',
             h2: 'text-h2',
             h3: 'text-h3',
             h4: 'text-h4',
             h5: 'text-h5',
             h6: 'text-h6',
-            'body-xl': 'text-body-xl',
-            'body-lg': 'text-body-lg',
-            'body-md': 'text-body-md',
-            'body-sm': 'text-body-sm',
-            'body-xs': 'text-body-xs',
+
+            // Body
+            'body-lg': 'text-lg', // 18px
+            'body-base': 'text-base', // 16px
+            'body-sm': 'text-sm', // 14px
+            // Legacy body mappings
+            'body-xl': 'text-lg',
+            'body-md': 'text-base',
+            'body-xs': 'text-caption', // Mapped to caption (12px)
+
+            // UI / Meta
+            caption: 'text-caption',
+            helper: 'text-helper',
+            overline: 'text-overline uppercase tracking-wider',
+            btn: 'text-btn',
+            label: 'text-label',
         },
         weight: {
             normal: 'font-normal',

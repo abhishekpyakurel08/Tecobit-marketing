@@ -31,7 +31,7 @@ export function MarqueeBanner() {
                     }}
                 >
                     {[...items, ...items, ...items, ...items].map((item, index) => (
-                        <span key={index} className="text-tecobit-deep-teal font-black uppercase tracking-[0.4em] text-xl md:text-3xl italic">
+                        <span key={index} className="text-tecobit-deep-teal font-bold uppercase tracking-[0.4em] text-xl md:text-3xl italic">
                             {item}
                         </span>
                     ))}
@@ -47,7 +47,7 @@ export function MarqueeBanner() {
                     aria-hidden="true"
                 >
                     {[...items, ...items, ...items, ...items].map((item, index) => (
-                        <span key={index} className="text-tecobit-deep-teal font-black uppercase tracking-[0.4em] text-xl md:text-3xl italic">
+                        <span key={index} className="text-tecobit-deep-teal font-bold uppercase tracking-[0.4em] text-xl md:text-3xl italic">
                             {item}
                         </span>
                     ))}

@@ -38,28 +38,14 @@ export function SidebarNavigation() {
             onMouseLeave={() => setIsCollapsed(true)}
         >
             {/* Logo Section */}
-            <div className="p-6 h-24 flex items-center mb-8">
-                <div className="relative h-12 w-12 flex-shrink-0">
-                    <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        fill
-                        className="object-contain"
+            <div className="p-6 h-32 flex items-center mb-4">
+                <div className="relative h-20 lg:h-24 w-auto flex-shrink-0">
+                    <img
+                        src="/tecobit-logo.png?v=4"
+                        alt="Tecobit Technology"
+                        className="h-full w-auto object-contain max-w-full"
                     />
                 </div>
-                <AnimatePresence>
-                    {!isCollapsed && (
-                        <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -10 }}
-                            className="ml-4 whitespace-nowrap"
-                        >
-                            <span className="text-xl font-black tracking-tighter block leading-none">TECOBIT</span>
-                            <span className="text-[10px] font-bold tracking-[0.3em] text-tecobit-mint uppercase">Marketing</span>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </div>
 
             {/* Nav Items */}
@@ -91,7 +77,7 @@ export function SidebarNavigation() {
 
                             {/* Hover Tooltip when collapsed */}
                             {isCollapsed && (
-                                <div className="absolute left-full ml-4 px-3 py-2 bg-black text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-2xl">
+                                <div className="absolute left-full ml-4 px-3 py-2 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-2xl">
                                     {item.name}
                                 </div>
                             )}
@@ -115,7 +101,7 @@ export function SidebarNavigation() {
                     </div>
                     {!isCollapsed && <span className="font-bold uppercase tracking-widest text-xs">Settings</span>}
                     {isCollapsed && (
-                        <div className="absolute left-full ml-4 px-3 py-2 bg-black text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        <div className="absolute left-full ml-4 px-3 py-2 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
                             Settings
                         </div>
                     )}

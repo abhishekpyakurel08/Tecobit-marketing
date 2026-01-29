@@ -3,7 +3,9 @@ import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
 })
 
 const anybody = Anybody({
@@ -15,36 +17,33 @@ const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Tecobit Marketing | Digital Growth Agency Nepal',
-    template: '%s | Tecobit Marketing'
-  },
-  description: 'Tecobit Marketing is the leading digital growth agency in Nepal. We provide expert SEO, Social Media Marketing, Web Development, and Branding services to scale your business.',
-  keywords: ['Digital Marketing Nepal', 'SEO Services Kathmandu', 'Web Development Nepal', 'Social Media Marketing Nepal', 'Tecobit Marketing'],
-  authors: [{ name: 'Tecobit Team' }],
-  creator: 'Tecobit Marketing',
-  publisher: 'Tecobit Marketing',
+  title: 'Tecobit Technology - Premium Software & Digital Solutions',
+  description: 'Empowering businesses with high-performance software and architecture-driven digital growth strategies.',
+  keywords: ['software development', 'IT solutions', 'brand strategy', 'web development', 'SEO', 'content marketing'],
+  authors: [{ name: 'Tecobit Technology' }],
+  creator: 'Tecobit Technology',
+  publisher: 'Tecobit Technology',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/tecobit-logo.png?v=3',
+    shortcut: '/tecobit-logo.png?v=3',
+    apple: '/tecobit-logo.png?v=3',
   },
   openGraph: {
-    title: 'Tecobit Marketing | Digital Growth Agency Nepal',
-    description: 'Empowering brands with data-driven digital marketing and world-class technology.',
+    title: 'Tecobit Technology - Premium Software & Digital Solutions',
+    description: 'Transform your business with architecture-driven digital growth strategies.',
     url: baseUrl,
-    siteName: 'Tecobit Marketing',
+    siteName: 'Tecobit Technology',
     images: [
       {
-        url: '/logo.png',
+        url: '/tecobit-logo.png?v=3',
         width: 800,
         height: 600,
-        alt: 'Tecobit Marketing Logo',
+        alt: 'Tecobit Technology Logo',
       },
     ],
     locale: 'en_US',
@@ -52,9 +51,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tecobit Marketing | Digital Growth Agency',
-    description: 'Leading digital marketing services in Nepal.',
-    images: ['/logo.png'],
+    title: 'Tecobit Technology - Premium Software & Digital Solutions',
+    description: 'Transform your business with architecture-driven digital growth strategies.',
+    images: ['/tecobit-logo.png?v=3'],
   },
   robots: {
     index: true,
@@ -89,8 +88,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const footerData = (await payload.findGlobal({ slug: 'footer' })) as unknown as FooterData
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${anybody.variable} font-sans grain relative selection:bg-tecobit-mint selection:text-black`}>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className={`font-sans grain relative selection:bg-tecobit-mint selection:text-black scrollbar-custom`}>
         <StructuredData />
         <ThemeProvider
           attribute="class"

@@ -6,9 +6,9 @@ export function StructuredData() {
     const organizationData = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Tecobit Marketing",
+        "name": "Tecobit Technology",
         "url": "https://tecobit.com",
-        "logo": "https://tecobit.com/logo.png",
+        "logo": "https://tecobit.com/tecobit-logo.png?v=3",
         "sameAs": [
             "https://facebook.com/tecobit",
             "https://twitter.com/tecobit",
@@ -31,8 +31,8 @@ export function StructuredData() {
     const localBusinessData = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Tecobit Marketing",
-        "image": "https://tecobit.com/logo.png",
+        "name": "Tecobit Technology",
+        "image": "https://tecobit.com/tecobit-logo.png?v=3",
         "@id": "https://tecobit.com",
         "url": "https://tecobit.com",
         "telephone": "+9779863992047",

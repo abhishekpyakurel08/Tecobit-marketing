@@ -17,24 +17,24 @@ export function ContactForm() {
                         className="space-y-10"
                     >
                         <div className="space-y-4">
-                            <h2 className="text-4xl font-black uppercase tracking-tighter">Send us a message</h2>
+                            <h2 className="text-4xl font-bold uppercase tracking-tighter">Send us a message</h2>
                             <p className="text-muted-foreground">We usually respond within 2-4 hours during business hours.</p>
                         </div>
 
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Name</label>
+                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Name</label>
                                     <input type="text" placeholder="John Doe" className="w-full bg-muted/20 border border-border p-5 rounded-2xl focus:border-tecobit-mint outline-none transition-all" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Email</label>
+                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Email</label>
                                     <input type="email" placeholder="john@company.com" className="w-full bg-muted/20 border border-border p-5 rounded-2xl focus:border-tecobit-mint outline-none transition-all" />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Service</label>
+                                <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Service</label>
                                 <select className="w-full bg-muted/20 border border-border p-5 rounded-2xl focus:border-tecobit-mint outline-none transition-all appearance-none cursor-pointer">
                                     <option>Social Media Marketing</option>
                                     <option>SEO Strategy</option>
@@ -44,14 +44,14 @@ export function ContactForm() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Message</label>
+                                <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Message</label>
                                 <textarea rows={5} placeholder="Tell us about your project goals..." className="w-full bg-muted/20 border border-border p-5 rounded-2xl focus:border-tecobit-mint outline-none transition-all resize-none"></textarea>
                             </div>
 
                             <motion.button
                                 whileHover={{ scale: 1.01 }}
                                 whileTap={{ scale: 0.99 }}
-                                className="w-full py-5 bg-foreground text-background font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-tecobit-mint hover:text-black transition-all shadow-xl"
+                                className="w-full py-5 bg-foreground text-background font-bold uppercase tracking-[0.2em] rounded-2xl hover:bg-tecobit-mint hover:text-black transition-all shadow-xl"
                             >
                                 Send Message
                             </motion.button>
@@ -71,7 +71,7 @@ export function ContactForm() {
                             </div>
 
                             <div className="space-y-4 relative z-10">
-                                <h3 className="text-2xl font-black uppercase">Contact Information</h3>
+                                <h3 className="text-2xl font-bold uppercase">Contact Information</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Prefer to talk? Reach out to us directly through any of the channels below.
                                 </p>
@@ -83,7 +83,7 @@ export function ContactForm() {
                                         <Mail size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">Email Us</p>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Email Us</p>
                                         <a href="mailto:info@tecobit.com" className="text-xl font-bold hover:text-tecobit-mint transition-colors">info@tecobit.com</a>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ export function ContactForm() {
                                         <Phone size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">Call Us</p>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Call Us</p>
                                         <a href="tel:+9779863992047" className="text-xl font-bold hover:text-tecobit-mint transition-colors">+977-9863992047</a>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ export function ContactForm() {
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">Find Us</p>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Find Us</p>
                                         <p className="text-xl font-bold">Kathmandu, Nepal</p>
                                     </div>
                                 </div>

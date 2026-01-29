@@ -52,7 +52,7 @@ export default async function BlogDetailsPage({ params }: PageProps) {
                     </Link>
 
                     <header className="space-y-8 mb-16">
-                        <h1 className="text-4xl md:text-6xl font-black text-foreground leading-tight tracking-tighter">
+                        <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tighter">
                             {blog.title}
                         </h1>
 

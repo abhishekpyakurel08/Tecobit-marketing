@@ -45,35 +45,38 @@ const services = [
     }
 ];
 
+import { Typography } from "./ui/typography";
+
 export function PremiumServices() {
     return (
-        <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+        <section className="py-20 md:py-32 bg-background relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-tecobit-mint/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-tecobit-deep-teal/5 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="mb-20">
+                <div className="mb-24">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="flex items-center space-x-3 text-tecobit-mint mb-4"
+                        className="flex items-center space-x-3 text-tecobit-mint mb-6"
                     >
                         <div className="h-px w-12 bg-tecobit-mint" />
-                        <span className="font-black tracking-[0.4em] text-xs uppercase">Our Expertise</span>
+                        <span className="font-bold tracking-[0.4em] text-xs uppercase">Our Expertise</span>
                     </motion.div>
 
-                    <motion.h2
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85]"
                     >
-                        Elite <span className="text-tecobit-mint">Solutions</span> <br />
-                        Built For <span className="text-tecobit-soft-mint transition-colors hover:text-tecobit-mint">Market Dominance</span>
-                    </motion.h2>
+                        <Typography variant="display-lg" className="font-bold uppercase tracking-tighter leading-[0.9]">
+                            Elite <span className="text-tecobit-mint">Solutions</span> <br />
+                            <span className="text-muted-foreground/50">Built For</span> <span className="text-tecobit-soft-mint transition-colors hover:text-tecobit-mint cursor-default">Market Dominance</span>
+                        </Typography>
+                    </motion.div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,6 +87,7 @@ export function PremiumServices() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
+                            className="h-full"
                         >
                             <ServiceCard
                                 title={service.title}

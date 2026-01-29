@@ -40,7 +40,7 @@ export function Navbar({ data }: NavbarProps) {
     const [scrolled, setScrolled] = useState(false);
 
     const navItems = data?.navItems || [];
-    const logoUrl = typeof data?.logo === 'object' && data.logo !== null ? (data.logo as any).url : '/logo.png';
+    const logoUrl = typeof data?.logo === 'object' && data.logo !== null ? (data.logo as any).url : '/tecobit-logo.png';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,56 +52,46 @@ export function Navbar({ data }: NavbarProps) {
 
     return (
         <header
-            className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-                ? "bg-background/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/10 dark:border-white/5 supports-[backdrop-filter]:bg-background/60"
-                : "bg-transparent py-5"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+                ? "h-16 md:h-20 bg-[hsl(var(--nav-bg))] backdrop-blur-xl shadow-lg border-b border-border/40"
+                : "h-20 md:h-24 lg:h-28 bg-transparent"
                 }`}
         >
-            <div className="container mx-auto px-6 flex items-center justify-between">
+            <div className="section-container !py-0 h-full flex items-center justify-between">
                 {/* Logo & Brand */}
-                <Link href="/" className="flex items-center space-x-3 group">
-                    <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-xl overflow-hidden shadow-lg transition-all group-hover:scale-105 group-hover:shadow-tecobit-mint/20 border border-white/10 bg-white/50 flex items-center justify-center">
-                        <Image
-                            src={logoUrl}
-                            alt="Tecobit Logo"
-                            fill
-                            className="object-contain p-1"
-                            priority
+                <Link href="/" className="flex items-center group">
+                    <div className="relative h-12 md:h-16 lg:h-20 w-auto flex items-center justify-start transition-transform group-hover:scale-105">
+                        <img
+                            src="/tecobit-logo.png?v=5"
+                            alt="Tecobit Technology"
+                            className="h-full w-auto object-contain dark:brightness-110"
                         />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-3xl md:text-4xl font-black tracking-tighter text-foreground leading-[0.75] mb-1.5 transition-all group-hover:text-tecobit-mint">TECOBIT</span>
-                        <span className="text-[11px] md:text-[13px] font-black tracking-[0.5em] text-tecobit-mint/80 uppercase">Marketing</span>
                     </div>
                 </Link>
 
                 {/* Desktop Menu */}
-                <nav className="hidden lg:flex items-center space-x-8">
-                    {navItems.map((item, index) => {
-                        const Icon = item.icon && iconMap[item.icon] ? iconMap[item.icon] : Briefcase;
-                        return (
-                            <Link
-                                key={index}
-                                href={item.link || "#"}
-                                className="text-foreground/80 hover:text-tecobit-mint font-black text-sm md:text-base uppercase tracking-[0.2em] transition-all hover:tracking-[0.3em] relative group/link"
-                            >
-                                <span>{item.label}</span>
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tecobit-mint transition-all group-hover/link:w-full"></span>
-                            </Link>
-                        );
-                    })}
+                <nav className="hidden lg:flex items-center gap-8">
+                    {navItems.map((item, index) => (
+                        <Link
+                            key={index}
+                            href={item.link || "#"}
+                            className="nav-link"
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
 
-                    <div className="flex items-center space-x-6 pl-4 border-l border-border">
+                    <div className="flex items-center gap-6 pl-6 border-l border-border/40">
                         <ThemeToggle />
 
                         <RippleButton
                             variant="primary"
-                            className="px-8 py-3.5 rounded-full shadow-lg shadow-tecobit-mint/10"
-                            onClick={() => window.location.href = `tel:${data?.phoneNumber || '+9779863992047'}`}
+                            className="btn-premium h-11 px-6 text-[11px]"
+                            onClick={() => window.location.href = `tel:${data?.phoneNumber || '+9779745697694'}`}
                         >
-                            <div className="flex items-center space-x-3">
-                                <Phone size={18} fill="black" />
-                                <span className="text-base font-black tracking-widest">{data?.phoneNumber || '+977-9863992047'}</span>
+                            <div className="flex items-center space-x-2">
+                                <Phone size={14} />
+                                <span className="font-bold">{data?.phoneNumber || '+977 974-5697694'}</span>
                             </div>
                         </RippleButton>
                     </div>
@@ -111,7 +101,7 @@ export function Navbar({ data }: NavbarProps) {
                 <div className="lg:hidden flex items-center space-x-4">
                     <ThemeToggle />
                     <button
-                        className="p-2 text-foreground"
+                        className="p-2 text-foreground hover:text-primary transition-colors"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -123,35 +113,34 @@ export function Navbar({ data }: NavbarProps) {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-background border-t border-border overflow-hidden shadow-2xl"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="lg:hidden fixed left-0 w-full bg-background/95 backdrop-blur-2xl border-b border-border shadow-2xl z-40"
+                        style={{ top: scrolled ? '64px' : '80px' }}
                     >
-                        <div className="p-6 space-y-4">
-                            {navItems.map((item, index) => {
-                                const Icon = item.icon && iconMap[item.icon] ? iconMap[item.icon] : Briefcase;
-                                return (
-                                    <Link
-                                        key={index}
-                                        href={item.link || "#"}
-                                        onClick={() => setIsOpen(false)}
-                                        className="flex items-center space-x-6 p-5 rounded-2xl hover:bg-tecobit-mint/10 transition-all text-2xl font-black uppercase tracking-tighter group"
-                                    >
-                                        <span className="text-tecobit-mint group-hover:scale-125 transition-transform"><Icon size={28} /></span>
-                                        <span className="group-hover:translate-x-2 transition-transform">{item.label}</span>
-                                    </Link>
-                                );
-                            })}
+                        <div className="p-8 space-y-4">
+                            {navItems.map((item, index) => (
+                                <Link
+                                    key={index}
+                                    href={item.link || "#"}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-primary/10 transition-all text-sm font-bold uppercase tracking-widest group"
+                                >
+                                    <span className="text-primary group-hover:scale-110 transition-transform">→</span>
+                                    <span>{item.label}</span>
+                                </Link>
+                            ))}
                             <div className="pt-6 border-t border-border">
                                 <RippleButton
                                     variant="primary"
-                                    size="lg"
-                                    className="w-full flex items-center justify-center space-x-4 py-6 rounded-2xl shadow-xl shadow-tecobit-mint/20"
-                                    onClick={() => window.location.href = "tel:+9779863992047"}
+                                    className="w-full btn-premium py-5"
+                                    onClick={() => window.location.href = "tel:+9779745697694"}
                                 >
-                                    <Phone size={24} fill="black" />
-                                    <span className="font-black tracking-widest">CALL US NOW</span>
+                                    <div className="flex items-center justify-center space-x-3">
+                                        <Phone size={18} />
+                                        <span>CALL US NOW</span>
+                                    </div>
                                 </RippleButton>
                             </div>
                         </div>

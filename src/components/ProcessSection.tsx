@@ -48,15 +48,27 @@ export function ProcessSection() {
             <div className="absolute top-0 right-0 w-96 h-96 bg-tecobit-mint/5 blur-[120px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-tecobit-deep-teal/10 blur-[120px] rounded-full"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-24">
-                    <h2 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 uppercase tracking-tighter leading-[0.85]">
-                        The Growth <span className="text-tecobit-mint">Blueprint</span>
+            <div className="section-container relative z-10 w-full">
+                <div className="text-center mb-16 lg:mb-24">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-block mb-4"
+                    >
+                        <span className="text-[10px] font-bold tracking-widest text-primary uppercase border border-primary/30 px-3 py-1 rounded-full bg-primary/5">
+                            OUR PROCESS
+                        </span>
+                    </motion.div>
+                    <h2 className="h2 mb-4">
+                        The Growth <span className="gradient-text">Blueprint</span>
                     </h2>
-                    <div className="w-32 h-2 bg-tecobit-mint mx-auto rounded-full"></div>
+                    <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base">
+                        A systematic approach to scaling your brand presence
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {processes.map((proc, index) => (
                         <motion.div
                             key={index}
@@ -64,18 +76,16 @@ export function ProcessSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="text-center space-y-6 group"
+                            className="card-premium group flex flex-col items-center text-center"
                         >
-                            <div className={`w-28 h-28 ${proc.color} rounded-full mx-auto flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300 relative`}>
-                                <div className="absolute inset-0 rounded-full animate-ping opacity-20 bg-inherit"></div>
-                                <proc.icon size={48} className="text-white relative z-10" />
+                            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                                <proc.icon size={28} />
                             </div>
-                            <div className="space-y-4">
-                                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">{proc.title}</h3>
-                                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-sm mx-auto font-medium">
-                                    {proc.description}
-                                </p>
-                            </div>
+
+                            <h3 className="text-lg font-bold mb-3 text-foreground">{proc.title}</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                {proc.description}
+                            </p>
                         </motion.div>
                     ))}
                 </div>

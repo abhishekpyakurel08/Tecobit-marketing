@@ -53,7 +53,7 @@ export function RippleButton({
     return (
         <button
             className={cn(
-                "relative overflow-hidden rounded-xl font-black uppercase tracking-widest transition-all active:scale-95",
+                "relative overflow-hidden rounded-xl font-bold uppercase tracking-widest transition-all active:scale-95",
                 variants[variant],
                 sizes[size],
                 className

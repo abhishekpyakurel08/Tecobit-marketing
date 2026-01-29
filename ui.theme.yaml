@@ -39,8 +39,8 @@ typography:
     body: "var(--font-inter)"
 
   sizes:
-    h1: "4.5rem"
-    h2: "3.5rem"
+    h1: "2rem"
+    h2: "1.9rem"
     h3: "2.25rem"
     body: "1rem"
     small: "0.875rem"

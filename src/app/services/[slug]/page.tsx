@@ -32,8 +32,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* Hero */}
                 <div className="container mx-auto px-6 mb-20">
                     <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-tecobit-mint font-bold uppercase tracking-[0.3em] mb-4 block">Service</span>
-                        <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-8">{service.title}</h1>
+                        <h1 className="text-xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter mb-8">{service.title}</h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
                             {service.description}
                         </p>
@@ -54,15 +53,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                             ) : (
                                 // Fallback image if no hero image
                                 <div className="w-full h-full bg-muted/20 flex items-center justify-center">
-                                    <span className="text-tecobit-mint opacity-20 font-black text-6xl">TECOBIT</span>
+                                    <span className="text-tecobit-mint opacity-20 font-bold text-4xl">TECOBIT</span>
                                 </div>
                             )}
                         </div>
                         <div className="space-y-8">
-                            <h2 className="text-3xl font-black uppercase mb-4">Why Choose Tecobit for {service.title}?</h2>
+                            <h2 className="text-3xl font-bold uppercase mb-4">Why Choose Tecobit for {service.title}?</h2>
                             <div className="space-y-4">
                                 {service.features && service.features.length > 0 ? (
-                                    service.features.map((item, index) => (
+                                    service.features.map((item: any, index: number) => (
                                         <div key={index} className="flex items-start space-x-4">
                                             <div className="mt-1 text-tecobit-mint"><CheckCircle2 size={24} /></div>
                                             <p className="text-muted-foreground text-lg">{item.feature}</p>
@@ -96,11 +95,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* Process Section if available */}
                 {service.process && service.process.length > 0 && (
                     <div className="container mx-auto px-6 mb-24">
-                        <h2 className="text-3xl font-black uppercase mb-12 text-center">Our Process</h2>
+                        <h2 className="text-3xl font-bold uppercase mb-12 text-center">Our Process</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {service.process.map((step, idx) => (
+                            {service.process.map((step: any, idx: number) => (
                                 <div key={idx} className="bg-muted/10 p-8 rounded-3xl border border-border">
-                                    <span className="text-5xl font-black text-tecobit-mint/20 mb-4 block">0{idx + 1}</span>
+                                    <span className="text-2xl font-bold text-tecobit-mint/20 mb-4 block">0{idx + 1}</span>
                                     <h3 className="text-xl font-bold uppercase mb-4">{step.title}</h3>
                                     <p className="text-muted-foreground text-sm">{step.description}</p>
                                 </div>

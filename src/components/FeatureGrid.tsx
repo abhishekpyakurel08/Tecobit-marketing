@@ -47,14 +47,14 @@ export function FeatureGrid() {
                             transition={{ duration: 0.8 }}
                             className="lg:w-1/2 space-y-6"
                         >
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-foreground leading-[0.85] tracking-tighter uppercase">
+                            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-foreground leading-[0.85] tracking-tighter uppercase">
                                 {feature.title}
                             </h2>
                             <div className="w-24 h-2 bg-tecobit-mint rounded-full"></div>
                             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
                                 {feature.description}
                             </p>
-                            <button className="text-tecobit-mint font-black text-lg flex items-center group tracking-[0.2em]">
+                            <button className="text-tecobit-mint font-bold text-lg flex items-center group tracking-[0.2em]">
                                 DISCOVER MORE
                                 <span className="ml-3 transform group-hover:translate-x-4 transition-transform text-2xl">→</span>
                             </button>

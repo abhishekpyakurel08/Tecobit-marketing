@@ -42,9 +42,9 @@ export default function AIStudioPage() {
                     <header className="mb-12">
                         <div className="flex items-center space-x-3 text-tecobit-mint mb-4">
                             <Zap size={24} className="fill-current" />
-                            <span className="font-black tracking-[0.4em] text-xs uppercase">Premium Lab</span>
+                            <span className="font-bold tracking-[0.4em] text-xs uppercase">Premium Lab</span>
                         </div>
-                        <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+                        <h1 className="text-xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter leading-[0.85] mb-8">
                             AI <span className="text-tecobit-mint italic">Studio</span>
                         </h1>
                         <p className="text-muted-foreground text-xl md:text-2xl max-w-3xl font-medium leading-relaxed">
@@ -65,7 +65,7 @@ export default function AIStudioPage() {
                                                 <span>PROMPT EDITOR</span>
                                             </div>
                                             <div className="h-4 w-px bg-white/10" />
-                                            <select className="bg-transparent border-none text-xs font-black uppercase tracking-widest outline-none text-tecobit-mint cursor-pointer">
+                                            <select className="bg-transparent border-none text-xs font-bold uppercase tracking-widest outline-none text-tecobit-mint cursor-pointer">
                                                 <option>GPT-4o (Default)</option>
                                                 <option>Claude 3.5 Sonnet</option>
                                                 <option>Llama 3 (Tecobit Fine-tuned)</option>
@@ -89,11 +89,11 @@ export default function AIStudioPage() {
                                     <div className="p-6 border-t border-white/5 flex items-center justify-between">
                                         <div className="flex space-x-4">
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Temperature</span>
+                                                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Temperature</span>
                                                 <input type="range" className="w-24 accent-tecobit-mint h-1 mt-2" />
                                             </div>
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Tokens</span>
+                                                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Tokens</span>
                                                 <span className="text-xs font-bold text-foreground mt-1">2,048</span>
                                             </div>
                                         </div>
@@ -109,7 +109,7 @@ export default function AIStudioPage() {
                                             ) : (
                                                 <Sparkles size={22} />
                                             )}
-                                            <span className="text-lg font-black tracking-widest">{isGenerating ? "GENERATING..." : "GENERATE ✨"}</span>
+                                            <span className="text-lg font-bold tracking-widest">{isGenerating ? "GENERATING..." : "GENERATE ✨"}</span>
                                         </RippleButton>
                                     </div>
                                 </div>
@@ -126,14 +126,14 @@ export default function AIStudioPage() {
                                             <div className="flex items-center justify-between mb-8">
                                                 <div className="flex items-center space-x-3 text-tecobit-mint">
                                                     <span className="w-2 h-2 bg-tecobit-mint rounded-full animate-pulse" />
-                                                    <span className="font-black tracking-[0.3em] text-[10px] uppercase">OUTPUT READY</span>
+                                                    <span className="font-bold tracking-[0.3em] text-[10px] uppercase">OUTPUT READY</span>
                                                 </div>
                                                 <div className="flex items-center space-x-4">
-                                                    <button className="flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-muted-foreground hover:text-tecobit-mint transition-colors">
+                                                    <button className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-tecobit-mint transition-colors">
                                                         <Copy size={16} />
                                                         <span>Copy</span>
                                                     </button>
-                                                    <button className="flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-muted-foreground hover:text-tecobit-mint transition-colors">
+                                                    <button className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-tecobit-mint transition-colors">
                                                         <Save size={16} />
                                                         <span>Save</span>
                                                     </button>
@@ -151,7 +151,7 @@ export default function AIStudioPage() {
                         {/* Sidebar Section */}
                         <div className="lg:col-span-4 space-y-8">
                             <GlassCard className="p-8">
-                                <h3 className="text-lg font-black uppercase tracking-widest mb-6 flex items-center">
+                                <h3 className="text-lg font-bold uppercase tracking-widest mb-6 flex items-center">
                                     <Layers size={18} className="mr-3 text-tecobit-mint" />
                                     Smart Presets
                                 </h3>
@@ -178,7 +178,7 @@ export default function AIStudioPage() {
                                 <div className="absolute top-0 right-0 p-4 text-white/10 group-hover:scale-150 transition-transform duration-700">
                                     <Sparkles size={120} />
                                 </div>
-                                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-4">Unlimited Power</h3>
+                                <h3 className="text-xl font-bold text-white uppercase tracking-tighter mb-4">Unlimited Power</h3>
                                 <p className="text-white/70 text-sm leading-relaxed mb-6">
                                     Unlock advanced features like full blog generation and visual asset creation.
                                 </p>

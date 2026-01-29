@@ -17,7 +17,7 @@ export function ProjectCTA() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-4 uppercase leading-none">
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tighter mb-4 uppercase leading-none">
                         Scale Your <span className="text-tecobit-mint">Digital impact</span>
                     </h2>
                     <div className="w-24 h-1 bg-tecobit-mint mx-auto rounded-full"></div>
@@ -28,7 +28,7 @@ export function ProjectCTA() {
                     {/* Left Info */}
                     <div className="lg:col-span-5 space-y-12">
                         <div className="space-y-6">
-                            <h3 className="text-3xl md:text-4xl font-black italic text-tecobit-mint leading-tight">Ready to lead the market?</h3>
+                            <h3 className="text-3xl md:text-4xl font-bold italic text-tecobit-mint leading-tight">Ready to lead the market?</h3>
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium">
                                 We specialize in high-growth digital infrastructure. From premium branding to performance SEO, we build the engines that drive your business forward.
                             </p>
@@ -114,7 +114,7 @@ export function ProjectCTA() {
                             <RippleButton
                                 type="button"
                                 size="lg"
-                                className="md:col-span-2 w-full bg-tecobit-mint text-black font-black py-6 rounded-2xl shadow-[0_0_40px_rgba(61,255,197,0.3)] uppercase tracking-[0.4em] transition-all hover:scale-[1.02] border-none"
+                                className="md:col-span-2 w-full bg-tecobit-mint text-black font-bold py-6 rounded-2xl shadow-[0_0_40px_rgba(61,255,197,0.3)] uppercase tracking-[0.4em] transition-all hover:scale-[1.02] border-none"
                             >
                                 Launch Your Project
                             </RippleButton>

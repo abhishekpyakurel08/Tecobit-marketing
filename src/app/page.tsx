@@ -1,19 +1,20 @@
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { HomeHero } from "@/components/HomeHero";
-import { FeatureGrid } from "@/components/FeatureGrid";
+import Features from "@/components/Features";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PortfolioLogos } from "@/components/PortfolioLogos";
 import { FaqSection } from "@/components/FaqSection";
-import { ProjectCTA } from "@/components/ProjectCTA";
+import CallToAction from "@/components/CallToAction";
 import Link from 'next/link';
 import { PageTransition } from '@/components/PageTransition';
-import { PremiumServices } from "@/components/PremiumServices";
+import Services from "@/components/Services";
 import { MarqueeBanner } from "@/components/MarqueeBanner";
+import { LocationSection } from "@/components/LocationSection";
 
 export const metadata = {
-  title: 'Digital Growth Agency in Nepal | Tecobit Marketing',
-  description: 'Expert SEO, SMM, and Web Development services in Kathmandu. We transform your business into a digital brand with data-driven strategies.',
+  title: 'Digital Excellence & Software Solutions | Tecobit Technology',
+  description: 'Tecobit Technology delivers high-performance software, IT solutions, and digital growth strategies for businesses globally.',
 }
 
 export default async function HomePage() {
@@ -37,9 +38,9 @@ export default async function HomePage() {
 
         <MarqueeBanner />
 
-        <FeatureGrid />
+        <Features />
 
-        <PremiumServices />
+        <Services />
 
         <ProcessSection />
 
@@ -47,8 +48,9 @@ export default async function HomePage() {
 
         <FaqSection />
 
-        <ProjectCTA />
+        <LocationSection />
 
+        <CallToAction />
 
       </div>
     </PageTransition>

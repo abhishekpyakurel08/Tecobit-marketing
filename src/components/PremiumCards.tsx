@@ -24,27 +24,38 @@ export function GlassCard({ children, className = "", hoverGlow = false }: Glass
     );
 }
 
+import { Typography } from "./ui/typography";
+
 export function ServiceCard({ title, description, icon, href }: { title: string, description: string, icon: React.ReactNode, href?: string }) {
     return (
-        <GlassCard hoverGlow className="p-8 group cursor-pointer">
-            <div className="w-16 h-16 rounded-xl bg-tecobit-mint/10 flex items-center justify-center text-tecobit-mint mb-6 group-hover:bg-tecobit-mint group-hover:text-black transition-all duration-500">
-                {icon}
-            </div>
-            <h3 className="text-2xl font-black uppercase tracking-tighter mb-4 text-foreground group-hover:text-tecobit-mint transition-colors">
-                {title}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed text-sm">
-                {description}
-            </p>
-            {href && (
-                <div className="mt-6 flex items-center text-xs font-black tracking-[0.2em] text-tecobit-mint opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 uppercase">
-                    Learn More
-                    <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+        <GlassCard hoverGlow className="p-8 h-full group cursor-pointer relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-tecobit-mint/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-tecobit-mint/10 flex items-center justify-center text-tecobit-mint mb-6 group-hover:bg-tecobit-mint group-hover:text-black transition-all duration-500 shadow-lg group-hover:shadow-tecobit-mint/50 ring-1 ring-tecobit-mint/20 group-hover:ring-0">
+                    {icon}
                 </div>
-            )}
+
+                <Typography variant="h3" className="mb-4 group-hover:text-tecobit-mint transition-colors tracking-tight">
+                    {title}
+                </Typography>
+
+                <Typography variant="body-md" color="muted" className="mb-8 leading-relaxed">
+                    {description}
+                </Typography>
+
+                {href && (
+                    <div className="flex items-center gap-2">
+                        <Typography variant="body-sm" weight="bold" className="uppercase tracking-[0.2em] text-tecobit-mint">
+                            Explore
+                        </Typography>
+                        <span className="text-tecobit-mint transition-transform group-hover:translate-x-1">→</span>
+                    </div>
+                )}
+            </div>
 
             {/* Hover Glow Effect */}
-            <div className="absolute -inset-24 bg-tecobit-mint/5 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-tecobit-mint/10 blur-[50px] rounded-full group-hover:bg-tecobit-mint/20 transition-all duration-700 pointer-events-none" />
         </GlassCard>
     );
 }

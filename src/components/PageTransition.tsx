@@ -40,7 +40,7 @@ export function PageTransition({ children }: PageTransitionProps) {
                         <motion.span
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="mt-4 text-[10px] font-black tracking-[0.5em] text-muted-foreground uppercase"
+                            className="mt-4 text-[10px] font-bold tracking-[0.5em] text-muted-foreground uppercase"
                         >
                             Initializing Excellence
                         </motion.span>

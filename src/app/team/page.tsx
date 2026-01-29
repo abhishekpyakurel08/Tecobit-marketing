@@ -37,7 +37,7 @@ export default function TeamPage() {
         <PageTransition>
             <div className="bg-transparent min-h-screen pt-20">
                 <div className="container mx-auto px-6 text-center mb-16">
-                    <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]">
+                    <h1 className="text-xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tighter mb-8 leading-[0.85]">
                         The <span className="text-tecobit-mint italic">Architects</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
@@ -63,8 +63,8 @@ export default function TeamPage() {
                                     </div>
                                 </div>
                             </div>
-                            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-2 group-hover:text-tecobit-mint transition-colors italic">{member.name}</h3>
-                            <p className="text-tecobit-mint font-black text-xs md:text-sm tracking-[0.3em] uppercase mb-4">{member.role}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter mb-2 group-hover:text-tecobit-mint transition-colors italic">{member.name}</h3>
+                            <p className="text-tecobit-mint font-bold text-xs md:text-sm tracking-[0.3em] uppercase mb-4">{member.role}</p>
                             <p className="text-muted-foreground text-lg leading-relaxed font-medium">{member.bio}</p>
                         </div>
                     ))}
